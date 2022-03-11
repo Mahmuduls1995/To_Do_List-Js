@@ -23,9 +23,20 @@ document.getElementById("add-btn").addEventListener("click", function () {
 
     const doneButton = document.getElementsByClassName("done-btn");
 
+    for (const button of deleteButton) {
+      button.addEventListener("click", function (e) {
+        e.target.parentNode.parentNode.style.display = "none";
+        // console.log(e.target.parentNode.parentNode);
+      });
+    }
+
+    for (const button of doneButton) {
+      button.addEventListener("click", function (e) {
+        e.target.parentNode.parentNode.style.textDecoration = "line-through";
+      });
+    }
+
     
-
-
   }
 
 
